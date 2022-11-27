@@ -1,0 +1,17 @@
+<p>Your name: <strong><%= @user_name %></strong></p>
+
+<h3>CURRENT USERS</h3>
+
+<p>
+    <%= for user <- @users do %>
+        <div>- <%= user %></div>
+    <% end %>
+</p>
+
+<section>
+    <button phx-click="start_game" 
+        disabled={if length(@users) < 2 and @waiting_game_room == nil, do: "disabled"}
+        title="Start a game">
+        <%= if length(@users) == 2, do: "Start a game", else: "need more users" %>
+    </button>
+</section>

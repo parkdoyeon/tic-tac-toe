@@ -1,0 +1,33 @@
+<p>Your name: <strong><%= @user_name %></strong></p>
+
+
+
+
+<section id="game-board">
+    <p>
+        <table>
+            <tr>
+                <td><button id="1/1">X</button></td>
+                <td><button id="1/2">X</button></td>
+                <td><button id="1/3">X</button></td>
+            </tr>
+            <tr>
+                <td><button id="2/1">X</button></td>
+                <td><button id="2/2">X</button></td>
+                <td><button id="2/3">X</button></td>
+            </tr>
+            <tr>
+                <td><button id="3/1">X</button></td>
+                <td><button id="3/2">X</button></td>
+                <td><button id="3/3">X</button></td>
+            </tr>
+        </table>
+    </p>
+
+<p>
+    <h3>CURRENT USERS</h3>
+    <%= for user <- @users do %>
+        <div>- <%= user %></div>
+    <% end %>
+</p>
+</section>
